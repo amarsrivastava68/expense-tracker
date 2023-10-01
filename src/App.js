@@ -1,7 +1,7 @@
 import ExpenseItem from "./components/ExpenseItem";
 
 function App() {
-<<<<<<< HEAD
+
   const expenses = [
     {
       id: "e1",
@@ -33,16 +33,7 @@ function App() {
     },
    
   ];
-=======
-  return (
-    <div> 
-      
-      <h2>Let's get started!</h2>
-      <ExpenseItem/>    
-    </div>
-  );
-}
->>>>>>> a1c162c02f021f6146abafe9c5fcd35f8c243919
+
 
   return (
     
