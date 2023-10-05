@@ -40,10 +40,18 @@ const App = () => {
     const expensedata = {
       ...comingdata,
     };
-    console.log('aa gaya aa gaya ')
+    console.log("aa gaya aa gaya ");
     console.log(expensedata);
-    setExpenses((prev) => [{id: expensedata.id , title : expensedata.title , date : expensedata.date , location : expensedata}, ...prev]);
-    
+    setExpenses((prev) => [
+      {
+        id: expensedata.id,
+        title: expensedata.enteredTitle,
+        date: expensedata.enteredDate,
+        amount : expensedata.enteredAmount ,
+        location: expensedata.enteredLocation,
+      },
+      ...prev,
+    ]);
   };
 
   return (

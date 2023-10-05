@@ -2,10 +2,7 @@ import './ExpenseDate.css'
 const ExpenseDate = (props) => {
     const date = props.date;
   
-    if (!date) {
-      return null;
-    }
-  
+   
     const month = date.toLocaleString("en-US", { month: "long" });
     console.log(month)
     const year = date.getFullYear();

@@ -28,7 +28,7 @@ function ExpenseItem(props) {
             <FontAwesomeIcon icon={faTrash} onClick={deleteHandler} />
           </div>
         </div>
-        <button onClick={clickHandler}>Change Title</button>
+        <button onClick={clickHandler}>ChangeTitle</button>
       </Card>
     </>
   );

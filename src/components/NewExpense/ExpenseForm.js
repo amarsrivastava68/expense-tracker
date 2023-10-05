@@ -14,28 +14,30 @@ const ExpenseForm = (props) => {
     enteredLocation: "",
   });
   const titlehandler = (event) => {
-    setUI({
-      ...userInput,
-      enteredTitle: event.target.value,
+    setUI((prevState)=>{
+    return{  ...userInput,
+      enteredTitle: event.target.value }
     });
   };
   const amounthandler = (event) => {
     setUI((prevState) => {
-      return { ...userInput, enteredAmount: event.target.value };
+      return { ...prevState, enteredAmount: event.target.value };
     });
   };
   const datehandler = (event) => {
-    const selectedDate = event.target.value
-    const formatted_date = new Date(selectedDate) ;
-    
+    const selectedDate = event.target.value.trim()
+    const formatted = new Date(selectedDate)
+    console.log(formatted)
+    console.log(typeof(form))
     setUI((prevState) => {          // Setter function for user input 
-      return { ...prevState, enteredDate: formatted_date };
+      return { ...prevState, enteredDate: new Date(selectedDate) };
+      
     });
   };
 
   const locationhandler = (event) => {
     setUI((prevState) => {
-      return { ...userInput, enteredLocation: event.target.value };
+      return { ...prevState, enteredLocation: event.target.value };
     });
   };
 
@@ -76,10 +78,13 @@ const ExpenseForm = (props) => {
         <div className="new-expense__control">
           <label>Date</label>
           <input
-            type="date"
-            
+            type='date'
+            name='date'
+            placeholder='Date'
+            value={userInput.date}
+            min='2018-01-01'
+            max='2030-12-31'
             onChange={datehandler}
-            value={userInput.enteredDate}
           />
         </div>
 
