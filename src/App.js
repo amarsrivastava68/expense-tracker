@@ -15,7 +15,7 @@ const App = () => {
       id: "e2",
       title: "New car",
       amount: 33.43,
-      date: new Date(2020, 5, 22),
+      date: new Date(2021, 5, 22),
       location: "Delhi",
     },
     {
@@ -29,7 +29,7 @@ const App = () => {
       id: "e4",
       title: "Bike",
       amount: 35.35,
-      date: new Date(2020, 4, 3),
+      date: new Date(2022, 4, 3),
       location: "Bengaluru",
     },
   ];
