@@ -15,6 +15,17 @@ function ExpenseItem(props) {
   const deleteHandler = () => {
     setPrice(0);
   };
+  const buttonStyle = {
+    margin: "5px",
+    padding: "8px 16px", // Adjust the padding as needed
+    borderRadius: "5px", // Adjust the border radius as needed
+    backgroundColor: "yellow", // Change the background color as needed
+    color: "black", // Change the text color as needed
+    border: "3px", // Remove the default button border
+    cursor: "pointer",
+  };
+
+  
   return (
     <>
       <Card className="expense-item">
@@ -28,7 +39,9 @@ function ExpenseItem(props) {
             <FontAwesomeIcon icon={faTrash} onClick={deleteHandler} />
           </div>
         </div>
-        <button onClick={clickHandler}>ChangeTitle</button>
+        <button style={buttonStyle} onClick={clickHandler}>
+          ChangeTitle
+        </button>
       </Card>
     </>
   );

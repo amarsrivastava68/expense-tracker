@@ -40,7 +40,7 @@ const App = () => {
     const expensedata = {
       ...comingdata,
     };
-    console.log("aa gaya aa gaya ");
+    console.log("data is coming .. ");
     console.log(expensedata);
     setExpenses((prev) => [
       {
