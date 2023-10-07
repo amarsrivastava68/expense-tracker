@@ -99,6 +99,7 @@ const ExpenseForm = (props) => {
           />
         </div>
       </div>
+      <button className="new-expense__control" onClick={props.onclose}>Cancel</button>
       <button className="new-expense__control" type="submit">
         Add Expense
       </button>
